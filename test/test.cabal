@@ -18,6 +18,9 @@ Executable gamma-tests
   ghc-options:          -threaded
   hs-source-dirs:       src
   main-is:              Tests.hs
+  other-modules:        GammaTests
+                        IncGammaTests
+                        Reference
   build-depends:        base >= 3 && <5, 
                         erf,
                         gamma,

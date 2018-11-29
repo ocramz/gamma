@@ -19,7 +19,8 @@ tested-with:            GHC == 6.10.4,
                         GHC == 6.12.1, GHC == 6.12.3,
                         GHC == 7.0.1, GHC == 7.0.2,
                         GHC == 7.2.1,
-                        GHC == 7.4.1
+                        GHC == 7.4.1,
+                        GHC == 8.0.1
 
 extra-source-files:     extras/*.hs
 
@@ -41,3 +42,21 @@ Library
                         converge,
                         template-haskell,
                         vector >= 0.5
+
+-- | FIXME Cabal >= 1.8 would let us have the test suite here rather than in a sub-package
+                        
+-- Executable gamma-tests
+--   ghc-options:          -threaded
+--   hs-source-dirs:       test/src
+--   main-is:              Tests.hs
+--   other-modules:        GammaTests
+--                         IncGammaTests
+--                         Reference
+--   build-depends:        base >= 3 && <5, 
+--                         erf,
+--                         gamma,
+--                         numbers,
+--                         QuickCheck >= 2.1.1, 
+--                         test-framework, 
+--                         test-framework-quickcheck2           
+                                     
